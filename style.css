@@ -14,9 +14,12 @@ body {
 
 .screen {
     width: 370px;
-    height: 80px;
-    background-color: rgb(244, 243, 243);
+    height: 100px;
+    background-color: rgb(237, 235, 235);
     border: 1px solid black;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: right;
 }
 
 .calcBottom {
@@ -29,4 +32,31 @@ body {
 button {
     width: 90px;
     height: 80px;
+    border-radius: 20%;
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+    background-color: rgb(247, 232, 70);
+    -webkit-text-stroke: 1px black;
+    font-weight: bold;
+    color: rgb(50, 86, 217);
+}
+
+.topBtns, .secondBtns, .thirdBtns, .fourthBtns, .bottomBtns {
+    display: flex;
+    gap: 6px;
+}
+
+.bottomBtns #equals {
+    width: 282px;
+    border-radius: 20%;
+}
+
+#equals, #on {
+    background-color: rgb(58, 202, 77);
+    color: white;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #decimel {
+    background-color: rgb(50, 86, 217);
+    color: white;
 }

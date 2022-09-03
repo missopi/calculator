@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-top: 10%;
+}
+
+.screen {
+    width: 370px;
+    height: 80px;
+    background-color: rgb(244, 243, 243);
+    border: 1px solid black;
+}
+
+.calcBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+button {
+    width: 90px;
+    height: 80px;
+}

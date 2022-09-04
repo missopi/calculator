@@ -30,6 +30,7 @@ body {
 
 .screen {
     display: flex;
+    flex-direction: column;
     width: 335px;
     height: 80px;
     background-color: rgb(240, 240, 240);
@@ -37,12 +38,17 @@ body {
     border: 20px solid rgb(86, 114, 151);
     border-top: 40px solid rgb(86, 114, 151);
     border-radius: 10px;
-    justify-content: end;
     padding: 15px;
-    font-size: 40px;
+    padding-bottom: 25px;
+    font-size: 30px;
     font-weight: bold;
-    align-items: flex-end;
     font-family: Roboto, sans-serif;
+    gap: 3px;
+    align-items: flex-end;  
+}
+
+.currentOp {
+    font-size: 50px;
 }
 
 .calcBottom {

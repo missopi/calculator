@@ -5,9 +5,14 @@ const equalsBtn = document.querySelector('[data-equals]');
 const previousOperation = document.querySelector('[data-pre]');
 const currentOperation = document.querySelector('[data-current]');
 
+class calculator {
+    constructor(previousOperation, currentOperation) {
+      this.previousOperation = previousOperation
+      this.currentOperation = currentOperation
+      this.clear()
+};
 
-
-function operate() {
+operate() {
     let calculation;
     let prev = this.previousOperator;
     let current = this.currentOperator;
@@ -26,8 +31,9 @@ function operate() {
     this.previousOperator = '';
 };
 
-function clear() {
-    this.currentOperator = ''
-    this.previousOperator = ''
-    this.operation = undefined
-};
+clear() {
+    this.currentOperator = '';
+    this.previousOperator = '';
+    this.operation = undefined;
+}};
+

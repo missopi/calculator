@@ -83,7 +83,8 @@ clearBtn.addEventListener('click', ()=> {
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calc.operate(button.innerText);
+        calc.chooseOperation(button.innerText);
+       
     })
 });
 

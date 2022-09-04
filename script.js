@@ -21,21 +21,21 @@ getNumber(number) {
 };
 
 chooseOperation(operation) {
-    if (this.current === '') return
+    if (this.current === '') return;
     if (this.previous !== '') {
       this.operate();
     };
-    this.current = '';
     this.operation = operation;
     this.previous = this.current;
-    console.log(this);
+    this.current = '';
+    console.log(this.previous);
 };
 
 operate() {
     let calculation;
-    let prev = this.previous;
+    let prev = parseFloat(this.previous);
     console.log(this.previous);
-    let curr = this.current;
+    let curr = parseFloat(this.current);
     console.log(this.current);
     if (prev === NaN || curr === NaN) return;
     console.log(this.operation);
@@ -68,7 +68,7 @@ clear() {
 
 display() {
     if (this.operation != null) {
-        this.previous.innerText = `${this.getdisplayNumber(this.previous)} ${this.operation}`;
+        this.previous = `${this.previous} ${this.operation}`;
     };
     console.log(this);
 }

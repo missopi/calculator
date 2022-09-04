@@ -23,12 +23,15 @@ getNumber(number) {
 };
 
 chooseOperation(operation) {
-    
+    if (this.currentOperation === '') return
+    if (this.previousOperation !== '') {
+      this.operate();
+    };
 
     this.currentOperation = '';
     this.operation = operation;
     this.previousOperation = this.currentOperation;
-}
+};
 
 operate() {
     let calculation;
@@ -80,8 +83,8 @@ clearBtn.addEventListener('click', ()=> {
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calc.chooseOperation(operatorBtns.innerText);
-        console.log(operatorBtns.innerText);
+        calc.operate(button.innerText);
+        console.log(button.innerText);
     })
 });
 

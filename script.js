@@ -48,6 +48,10 @@ operate() {
     this.previousOperation = '';
 }
 
+delete() {
+    this.currentOperation = this.currentOperation.toString().slice(0, -1);
+}
+
 clear() {
     this.currentOperation = '';
     this.previousOperation = '';

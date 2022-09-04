@@ -68,28 +68,24 @@ const calc = new calculator(previousOperation, currentOperation);
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
         calc.getNumber(button.innerText);
-        console.log(button.innerText);
     });
 });
 
 equalsBtn.addEventListener('click', ()=> {
-    calc.operate(equalsBtn.innerText);
-    console.log(equalsBtn.innerText);
+    calc.operate();
 });
 
 clearBtn.addEventListener('click', ()=> {
-    console.log('clear');
 });
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
         calc.operate(button.innerText);
-        console.log(button.innerText);
     })
 });
 
 onBtn.addEventListener('click', ()=> {
-    console.log('on');
+    
 })
 
 

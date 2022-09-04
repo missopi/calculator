@@ -17,12 +17,17 @@ on() {
 
 }
 
-getNumber() {
+getNumber(number) {
+    if (number === 'decimel' && this.currentOperation.includes('decimel')) return;
+    this.currentOperation = this.currentOperation.toString() + number.toString();
+};
 
-}
+chooseOperation(operation) {
+    
 
-chooseOperation() {
-
+    this.currentOperation = '';
+    this.operation = operation;
+    this.previousOperation = this.currentOperation;
 }
 
 operate() {
@@ -42,16 +47,15 @@ operate() {
     this.currentOperation = calculation;
     this.operation = undefined;
     this.previousOperation = '';
-};
+}
 
 clear() {
     this.currentOperation = '';
     this.previousOperation = '';
     this.operation = undefined;
-}
+};
 
 display() {
-
 }
 
 };
@@ -60,12 +64,14 @@ const calc = new calculator(previousOperation, currentOperation);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        console.log('number');
+        calc.getNumber(button.innerText);
+        console.log(button.innerText);
     });
 });
 
 equalsBtn.addEventListener('click', ()=> {
-    console.log('equals');
+    calc.operate(equalsBtn.innerText);
+    console.log(equalsBtn.innerText);
 });
 
 clearBtn.addEventListener('click', ()=> {
@@ -74,7 +80,8 @@ clearBtn.addEventListener('click', ()=> {
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        console.log('operate');
+        calc.chooseOperation(operatorBtns.innerText);
+        console.log(operatorBtns.innerText);
     })
 });
 

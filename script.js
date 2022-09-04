@@ -13,7 +13,15 @@ class calculator {
       this.clear()
 };
 
+on() {
+
+}
+
 getNumber() {
+
+}
+
+chooseOperation() {
 
 }
 
@@ -42,7 +50,7 @@ clear() {
     this.operation = undefined;
 }
 
-updateDisplay() {
+display() {
 
 }
 

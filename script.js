@@ -63,30 +63,30 @@ display() {
 
 };
 
-const calc = new calculator(previousOperation, currentOperation);
+const calculator = new calculator(previousOperation, currentOperation);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calc.getNumber(button.innerText);
+        calculator.getNumber(button.innerText);
     });
 });
 
 equalsBtn.addEventListener('click', ()=> {
-    calc.operate();
+    calculator.operate();
 });
 
 clearBtn.addEventListener('click', ()=> {
-    calc.clear();
+    calculator.clear();
 });
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calc.operate(button.innerText);
+        calculator.operate(button.innerText);
     })
 });
 
 deleteBtn.addEventListener('click', ()=> {
-    calc.delete();
+    calculator.delete();
 })
 
 

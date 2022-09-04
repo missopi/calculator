@@ -14,8 +14,8 @@ class calculator {
 
 operate() {
     let calculation;
-    let prev = this.previousOperator;
-    let current = this.currentOperator;
+    let prev = this.previousOperation;
+    let current = this.currentOperation;
     if (prev === NaN || current === NaN) return;
     if (this.operation === 'add') {
         calculation = prev + current;
@@ -26,14 +26,14 @@ operate() {
     } else if (this.operation === 'divide') {
         calculation = prev / current;
     };
-    this.currentOperator = calculation;
+    this.currentOperation = calculation;
     this.operation = undefined;
-    this.previousOperator = '';
+    this.previousOperation = '';
 };
 
 clear() {
-    this.currentOperator = '';
-    this.previousOperator = '';
+    this.currentOperation = '';
+    this.previousOperation = '';
     this.operation = undefined;
 }};
 

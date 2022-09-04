@@ -1,23 +1,30 @@
+const numberBtns = document.querySelectorAll('[data-num]');
+const clearBtn = document.querySelector('[data-clear]');
+const operatorBtns = document.querySelectorAll('[data-op]');
+const equalsBtn = document.querySelector('[data-equals]');
+const previousOperation = document.querySelector('[data-pre]');
+const currentOperation = document.querySelector('[data-current]');
+
+
+
+
+
+
+
+
 const add = function(a, b) {
     return a + b;
 };
-
-console.log(add(10, 2));
   
 const subtract = function(a, b) {
     return a - b;
 };
 
-console.log(subtract(10, 2));
-
 const multiply = function(a, b) {
     return a * b;
 };
-
-console.log(multiply(10, 2));
 
 const divide = function(a, b) {
     return a / b;
 };
 
-console.log(divide(10, 2));

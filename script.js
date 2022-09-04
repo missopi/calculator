@@ -68,7 +68,7 @@ clear() {
 
 display() {
     if (this.operation != null) {
-        this.previous.innerText = `${this.getNumber(this.previous)} ${this.operation}`;
+        this.previous.innerText = `${this.getdisplayNumber(this.previous)} ${this.operation}`;
     };
     console.log(this);
 }

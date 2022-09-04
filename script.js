@@ -17,6 +17,7 @@ class calculator {
 getNumber(number) {
     if (number === 'decimel' && this.currentOperation.includes('decimel')) return;
     this.currentOperation = this.currentOperation.toString() + number.toString();
+    console.log(this);
 };
 
 chooseOperation(operation) {
@@ -24,16 +25,18 @@ chooseOperation(operation) {
     if (this.previousOperation !== '') {
       this.operate();
     };
-
     this.currentOperation = '';
     this.operation = operation;
     this.previousOperation = this.currentOperation;
+    console.log(this);
 };
 
 operate() {
     let calculation;
     let prev = this.previousOperation;
+    console.log(this);
     let current = this.currentOperation;
+    console.log(this);
     if (prev === NaN || current === NaN) return;
     if (this.operation === 'add') {
         calculation = prev + current;
@@ -47,19 +50,26 @@ operate() {
     this.currentOperation = calculation;
     this.operation = undefined;
     this.previousOperation = '';
+    console.log(this);
 }
 
 delete() {
     this.currentOperation = this.currentOperation.toString().slice(0, -1);
+    console.log(this);
 }
 
 clear() {
     this.currentOperation = '';
     this.previousOperation = '';
     this.operation = undefined;
+    console.log(this);
 };
 
 display() {
+    if (this.operation != null) {
+        this.previousOperation = `${this.getNumber(this.previousOperation)} ${this.operation}`;
+    };
+    console.log(this);
 }
 
 

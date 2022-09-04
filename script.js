@@ -2,72 +2,73 @@ const numberBtns = document.querySelectorAll('[data-num]');
 const clearBtn = document.querySelector('[data-clear]');
 const operatorBtns = document.querySelectorAll('[data-op]');
 const equalsBtn = document.querySelector('[data-equals]');
-const previousOperation = document.querySelector('[data-pre]');
-const currentOperation = document.querySelector('[data-current]');
+const previous = document.querySelector('[data-pre]');
+const current = document.querySelector('[data-current]');
 const deleteBtn = document.querySelector('[data-delete]');
 
 
 class calculator {
-    constructor(previousOperation, currentOperation) {
-      this.previousOperation = previousOperation
-      this.currentOperation = currentOperation
+    constructor(previous, current) {
+      this.previous = previous;
+      this.current = current;
       this.clear()
 };
 
 getNumber(number) {
-    if (number === 'decimel' && this.currentOperation.includes('decimel')) return;
-    this.currentOperation = this.currentOperation.toString() + number.toString();
-    console.log(this);
+    if (number === 'decimel' && this.current.includes('decimel')) return;
+    this.current = this.current.toString() + number.toString();
+    console.log(this.current);
 };
 
 chooseOperation(operation) {
-    if (this.currentOperation === '') return
-    if (this.previousOperation !== '') {
+    if (this.current === '') return
+    if (this.previous !== '') {
       this.operate();
     };
-    this.currentOperation = '';
+    this.current = '';
     this.operation = operation;
-    this.previousOperation = this.currentOperation;
+    this.previous = this.current;
     console.log(this);
 };
 
 operate() {
     let calculation;
-    let prev = this.previousOperation;
-    console.log(this);
-    let current = this.currentOperation;
-    console.log(this);
-    if (prev === NaN || current === NaN) return;
-    if (this.operation === 'add') {
-        calculation = prev + current;
-    } else if (this.operation === 'minus') {
-        calculation = prev - current;
-    } else if (this.operation === 'multiply') {
-        calculation = prev * current;
-    } else if (this.operation === 'divide') {
-        calculation = prev / current;
+    let prev = this.previous;
+    console.log(this.previous);
+    let curr = this.current;
+    console.log(this.current);
+    if (prev === NaN || curr === NaN) return;
+    console.log(this.operation);
+    if (this.operation === '+') {
+        calculation = prev + curr;
+    } else if (this.operation === '-') {
+        calculation = prev - curr;
+    } else if (this.operation === 'x') {
+        calculation = prev * curr;
+    } else if (this.operation === '÷') {
+        calculation = prev / curr;
     };
-    this.currentOperation = calculation;
+    this.current = calculation;
     this.operation = undefined;
-    this.previousOperation = '';
+    this.previous = '';
     console.log(this);
 }
 
 delete() {
-    this.currentOperation = this.currentOperation.toString().slice(0, -1);
-    console.log(this);
+    this.current = this.current.toString().slice(0, -1);
+    console.log(this.current);
 }
 
 clear() {
-    this.currentOperation = '';
-    this.previousOperation = '';
+    this.current = '';
+    this.previous = '';
     this.operation = undefined;
     console.log(this);
 };
 
 display() {
     if (this.operation != null) {
-        this.previousOperation = `${this.getNumber(this.previousOperation)} ${this.operation}`;
+        this.previous.innerText = `${this.getNumber(this.previous)} ${this.operation}`;
     };
     console.log(this);
 }
@@ -75,7 +76,7 @@ display() {
 
 };
 
-const calc = new calculator(previousOperation, currentOperation);
+const calc = new calculator(previous, current);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {

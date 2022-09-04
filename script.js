@@ -4,6 +4,7 @@ const operatorBtns = document.querySelectorAll('[data-op]');
 const equalsBtn = document.querySelector('[data-equals]');
 const previousOperation = document.querySelector('[data-pre]');
 const currentOperation = document.querySelector('[data-current]');
+const onBtn = document.querySelector('[data-on]');
 
 class calculator {
     constructor(previousOperation, currentOperation) {
@@ -68,5 +69,9 @@ operatorBtns.forEach(button => {
         console.log('operate');
     })
 });
+
+onBtn.addEventListener('click', ()=> {
+    console.log('on');
+})
 
 

@@ -12,7 +12,9 @@ class calculator {
       this.clear()
 };
 
-getNumber()
+getNumber() {
+
+}
 
 operate() {
     let calculation;
@@ -39,7 +41,9 @@ clear() {
     this.operation = undefined;
 }
 
-updateDisplay()
+updateDisplay() {
+
+}
 
 };
 
@@ -47,24 +51,21 @@ const calc = new calculator(previousOperation, currentOperation);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calculator.getNumber();
-        calculator.updateDisplay();
+        console.log('number');
     });
 });
 
 equalsBtn.addEventListener('click', ()=> {
-    calculator.operate();
-    calculator.updateDisplay();
+    console.log('equals');
 });
 
 clearBtn.addEventListener('click', ()=> {
-    calculator.clear();
-    calculator.updateDisplay();
+    console.log('clear');
 });
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calculator.updateDisplay();
+        console.log('operate');
     })
 });
 

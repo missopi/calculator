@@ -7,24 +7,22 @@ const currentOperation = document.querySelector('[data-current]');
 
 
 
-
-
-
-
-
-const add = function(a, b) {
-    return a + b;
-};
-  
-const subtract = function(a, b) {
-    return a - b;
-};
-
-const multiply = function(a, b) {
-    return a * b;
-};
-
-const divide = function(a, b) {
-    return a / b;
+function operate() {
+    let calculation
+    let prev = this.previousOperation;
+    let current = this.currentOperation;
+    if (prev === NaN || current === NaN) return;
+    if (this.operation === 'add') {
+        calculation = prev + current;
+    } else if (this.operation === 'minus') {
+        calculation = prev - current;
+    } else if (this.operation === 'multiply') {
+        calculation = prev * current;
+    } else if (this.operation === 'divide') {
+        calculation = prev / current;
+    }
+    this.currentOperation = calculation;
+    this.operation = undefined;
+    this.previousOperation = '';
 };
 

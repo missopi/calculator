@@ -70,26 +70,30 @@ const calc = new calculator(previousOperation, currentOperation);
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
         calc.getNumber(button.innerText);
+        calc.display();
     });
 });
 
 equalsBtn.addEventListener('click', ()=> {
     calc.operate();
+    calc.display();
 });
 
 clearBtn.addEventListener('click', ()=> {
     calc.clear();
+    calc.display();
 });
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
         calc.chooseOperation(button.innerText);
-       
+        calc.display();
     })
 });
 
 deleteBtn.addEventListener('click', ()=> {
     calc.delete();
+    calc.display();
 })
 
 

@@ -37,12 +37,13 @@ clear() {
     this.operation = undefined;
 }};
 
-const calculator = new calculator(previousOperation, currentOperation);
+updateDisplay()
 
-numberBtns.forEach(button =>{
-    button.addEventListener('click', ()=> {
-        calculator.appendNumber(button.innerText)
-        calculator.updateDisplay();
-    });
+const calc = new calculator(previousOperation, currentOperation);
+
+equalsBtn.addEventListener('click', ()=> {
+    calculator.operate();
+    calculator.updateDisplay();
 });
+
 

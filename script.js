@@ -6,6 +6,7 @@ const previousOperation = document.querySelector('[data-pre]');
 const currentOperation = document.querySelector('[data-current]');
 const deleteBtn = document.querySelector('[data-delete]');
 
+
 class calculator {
     constructor(previousOperation, currentOperation) {
       this.previousOperation = previousOperation
@@ -61,32 +62,33 @@ clear() {
 display() {
 }
 
+
 };
 
-const calculator = new calculator(previousOperation, currentOperation);
+const calc = new calculator(previousOperation, currentOperation);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calculator.getNumber(button.innerText);
+        calc.getNumber(button.innerText);
     });
 });
 
 equalsBtn.addEventListener('click', ()=> {
-    calculator.operate();
+    calc.operate();
 });
 
 clearBtn.addEventListener('click', ()=> {
-    calculator.clear();
+    calc.clear();
 });
 
 operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
-        calculator.operate(button.innerText);
+        calc.operate(button.innerText);
     })
 });
 
 deleteBtn.addEventListener('click', ()=> {
-    calculator.delete();
+    calc.delete();
 })
 
 

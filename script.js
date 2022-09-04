@@ -76,6 +76,7 @@ equalsBtn.addEventListener('click', ()=> {
 });
 
 clearBtn.addEventListener('click', ()=> {
+    calc.clear();
 });
 
 operatorBtns.forEach(button => {
@@ -85,7 +86,7 @@ operatorBtns.forEach(button => {
 });
 
 deleteBtn.addEventListener('click', ()=> {
-
+    calc.delete();
 })
 
 

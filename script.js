@@ -12,6 +12,8 @@ class calculator {
       this.clear()
 };
 
+getNumber()
+
 operate() {
     let calculation;
     let prev = this.previousOperation;
@@ -35,14 +37,28 @@ clear() {
     this.currentOperation = '';
     this.previousOperation = '';
     this.operation = undefined;
-}};
+}
 
 updateDisplay()
 
+};
+
 const calc = new calculator(previousOperation, currentOperation);
+
+numberBtns.forEach(button => {
+    button.addEventListener('click', ()=> {
+        calculator.getNumber();
+        calculator.updateDisplay();
+    });
+});
 
 equalsBtn.addEventListener('click', ()=> {
     calculator.operate();
+    calculator.updateDisplay();
+});
+
+clearBtn.addEventListener('click', ()=> {
+    calculator.clear();
     calculator.updateDisplay();
 });
 

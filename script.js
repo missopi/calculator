@@ -4,7 +4,7 @@ const operatorBtns = document.querySelectorAll('[data-op]');
 const equalsBtn = document.querySelector('[data-equals]');
 const previousOperation = document.querySelector('[data-pre]');
 const currentOperation = document.querySelector('[data-current]');
-const onBtn = document.querySelector('[data-on]');
+const deleteBtn = document.querySelector('[data-delete]');
 
 class calculator {
     constructor(previousOperation, currentOperation) {
@@ -12,10 +12,6 @@ class calculator {
       this.currentOperation = currentOperation
       this.clear()
 };
-
-on() {
-
-}
 
 getNumber(number) {
     if (number === 'decimel' && this.currentOperation.includes('decimel')) return;
@@ -84,8 +80,8 @@ operatorBtns.forEach(button => {
     })
 });
 
-onBtn.addEventListener('click', ()=> {
-    
+deleteBtn.addEventListener('click', ()=> {
+
 })
 
 

@@ -81,6 +81,10 @@ button {
     font-size: 60px;
 }
 
+#delete {
+    font-size: 35px;
+}
+
 #clear {
     background-color: rgb(165, 0, 0);
     color: white;

@@ -62,4 +62,10 @@ clearBtn.addEventListener('click', ()=> {
     calculator.updateDisplay();
 });
 
+operatorBtns.forEach(button => {
+    button.addEventListener('click', ()=> {
+        calculator.updateDisplay();
+    })
+});
+
 

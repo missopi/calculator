@@ -50,6 +50,7 @@ body {
 .currentOp {
     font-size: 50px;
 }
+
 .preOp {
     font-size: 30px;
 }
@@ -84,11 +85,11 @@ button {
     font-size: 60px;
 }
 
-#delete {
+#DEL {
     font-size: 35px;
 }
 
-#clear {
+#CE {
     background-color: rgb(165, 0, 0);
     color: white;
 }

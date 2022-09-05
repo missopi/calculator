@@ -54,14 +54,19 @@ operate() {
     this.current = calculation;
     this.operation = undefined;
     this.previous = '';
-}
+};
 
 delete() {
     this.current = this.current.toString().slice(0, -1);
-}
+};
 
 display() {
-    
+    this.currentText.innerText = this.current;
+    if (this.operation != null) {
+      this.previousText.innerText =`${this.previous} ${this.operation}`
+    } else {
+      this.previousText.innerText = ''
+    };
 };
 
 };

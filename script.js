@@ -59,7 +59,7 @@ operate() {
 };
 
 roundNumber(number) {
-    return Math.round(number * 1000) / 1000;
+    return Math.round(number * 10000) / 10000;
 };
 
 delete() {
@@ -67,13 +67,14 @@ delete() {
 };
 
 display() {
-    this.currentText.innerText = this.current;
+    this.currentText.innerText = this.roundNumber(this.current);
     if (this.operation != null) {
-      this.previousText.innerText =`${this.previous} ${this.operation}`
+      this.previousText.innerText =`${this.roundNumber(this.previous)} ${this.operation}`
     } else {
       this.previousText.innerText = '';
     };
 }};
+
 
 const calc = new calculator(previousText, currentText);
 

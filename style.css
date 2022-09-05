@@ -50,6 +50,9 @@ body {
 .currentOp {
     font-size: 50px;
 }
+.preOp {
+    font-size: 30px;
+}
 
 .calcBottom {
     display: flex;

@@ -34,21 +34,19 @@ body {
     width: 335px;
     height: 80px;
     background-color: rgb(240, 240, 240);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 20px solid rgb(86, 114, 151);
     border-top: 40px solid rgb(86, 114, 151);
     border-radius: 10px;
     padding: 15px;
-    padding-bottom: 25px;
-    font-size: 30px;
+    padding-bottom: 30px;
     font-weight: bold;
     font-family: Roboto, sans-serif;
-    gap: 3px;
     align-items: flex-end;  
 }
 
 .currentOp {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .preOp {

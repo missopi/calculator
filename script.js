@@ -15,7 +15,7 @@ class calculator {
 };
 
 getNumber(number) {
-    if (number === 'decimel' && this.current.includes('decimel')) return;
+    if (number === '.' && this.current.includes('.')) return;
     this.current = this.current.toString() + number.toString();
 };
 

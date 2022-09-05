@@ -73,12 +73,12 @@ numberBtns.forEach(button => {
     });
 });
 
-equalsBtn.addEventListener('click', ()=> {
+equalsBtn.addEventListener('click', button => {
     calc.operate();
     calc.display();
 });
 
-clearBtn.addEventListener('click', ()=> {
+clearBtn.addEventListener('click', button => {
     calc.clear();
     calc.display();
 });
@@ -90,7 +90,7 @@ operatorBtns.forEach(button => {
     });
 });
 
-deleteBtn.addEventListener('click',()=> {
+deleteBtn.addEventListener('click', button => {
     calc.delete();
     calc.display();
 });

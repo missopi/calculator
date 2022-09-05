@@ -65,7 +65,7 @@ display() {
     if (this.operation != null) {
       this.previousText.innerText =`${this.previous} ${this.operation}`
     } else {
-      this.previousText.innerText = ''
+      this.previousText.innerText = '';
     };
 }};
 

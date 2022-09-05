@@ -42,7 +42,9 @@ operate() {
         calculation = prev * curr;
     } else if (this.operation === '÷') {
         calculation = prev / curr;
-    };
+    } else {
+        return;
+    }
     this.current = calculation;
     this.operation = undefined;
     this.previous = '';

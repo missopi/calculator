@@ -7,6 +7,8 @@ const currentText = document.querySelector('[data-current]');
 const deleteBtn = document.querySelector('[data-delete]');
 
 
+// class to house all of the calculator functions
+
 class calculator {
     constructor(previousText, currentText) {
       this.previousText = previousText;
@@ -70,6 +72,9 @@ display() {
 }};
 
 const calc = new calculator(previousText, currentText);
+
+
+// event listeners for all of the buttons to link up to the functions
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {

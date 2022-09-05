@@ -58,6 +58,10 @@ operate() {
     this.previous = '';
 };
 
+roundNumber(number) {
+    return Math.round(number * 1000) / 1000;
+};
+
 delete() {
     this.current = this.current.toString().slice(0, -1);
 };
@@ -104,5 +108,7 @@ deleteBtn.addEventListener('click', button => {
     calc.delete();
     calc.display();
 });
+
+
 
 

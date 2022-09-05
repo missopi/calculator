@@ -67,9 +67,7 @@ display() {
     } else {
       this.previousText.innerText = ''
     };
-};
-
-};
+}};
 
 const calc = new calculator(previousText, currentText);
 

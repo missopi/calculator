@@ -2,15 +2,15 @@ const numberBtns = document.querySelectorAll('[data-num]');
 const clearBtn = document.querySelector('[data-clear]');
 const operatorBtns = document.querySelectorAll('[data-op]');
 const equalsBtn = document.querySelector('[data-equals]');
-const previous = document.querySelector('[data-pre]');
-const current = document.querySelector('[data-current]');
+const previousText = document.querySelector('[data-pre]');
+const currentText = document.querySelector('[data-current]');
 const deleteBtn = document.querySelector('[data-delete]');
 
 
 class calculator {
-    constructor(previous, current) {
-      this.previous = previous;
-      this.current = current;
+    constructor(previousText, currentText) {
+      this.previousText = previousText;
+      this.currentText = currentText;
       this.clear()
 };
 
@@ -59,16 +59,12 @@ clear() {
 };
 
 display() {
-    if (this.operation != null) {
-        this.previous = `${this.previous} ${this.operation}`;
-    };
-    console.log(this);
-}
-
+    
+};
 
 };
 
-const calc = new calculator(previous, current);
+const calc = new calculator(previousText, currentText);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {
@@ -91,12 +87,12 @@ operatorBtns.forEach(button => {
     button.addEventListener('click', ()=> {
         calc.chooseOperation(button.innerText);
         calc.display();
-    })
+    });
 });
 
-deleteBtn.addEventListener('click', ()=> {
+deleteBtn.addEventListener('click',()=> {
     calc.delete();
     calc.display();
-})
+});
 
 

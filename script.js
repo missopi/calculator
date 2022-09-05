@@ -31,8 +31,8 @@ chooseOperation(operation) {
 
 operate() {
     let calculation;
-    let prev = parseFloat(this.previous);
-    let curr = parseFloat(this.current);
+    const prev = parseFloat(this.previous);
+    const curr = parseFloat(this.current);
     if (prev === NaN || curr === NaN) return;
     if (this.operation === '+') {
         calculation = prev + curr;

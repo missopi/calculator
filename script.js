@@ -14,6 +14,12 @@ class calculator {
       this.clear()
 };
 
+clear() {
+    this.current = '';
+    this.previous = '';
+    this.operation = undefined;
+};
+
 getNumber(number) {
     if (number === '.' && this.current.includes('.')) return;
     this.current = this.current.toString() + number.toString();
@@ -53,12 +59,6 @@ operate() {
 delete() {
     this.current = this.current.toString().slice(0, -1);
 }
-
-clear() {
-    this.current = '';
-    this.previous = '';
-    this.operation = undefined;
-};
 
 display() {
     

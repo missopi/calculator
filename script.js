@@ -80,7 +80,7 @@ keyboardSupport(e) {
     if (e.key === '=' || e.key === 'Enter') this.operate();
     if (e.key === 'Backspace') this.delete();
     if (e.key === 'Escape') this.clear();
-    if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') this.convertKey(e.key)
+    if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') this.chooseOperator(e.key);
 };
 
 convertKey(keyOperator) {
@@ -89,7 +89,6 @@ convertKey(keyOperator) {
     if (keyOperator === '/') return '÷';
     if (keyOperator === '*') return 'x';
 }};
-
 
 const calc = new calculator(previousText, currentText);
 

@@ -77,17 +77,17 @@ display() {
 
 keyboardSupport(e) {
     if ((e.key >= 0 && e.key <= 9) || (e.key === '.')) this.getNumber(e.key);
-    if (e.key === '=' || e.key === 'Enter') this.operate();
+    if ((e.key === '=') || (e.key === 'Enter')) this.operate();
     if (e.key === 'Backspace') this.delete();
     if (e.key === 'Escape') this.clear();
-    if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') this.chooseOperator(e.key);
+    if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') this.convertKey(e.key);
 };
 
-convertKey(keyOperator) {
-    if (keyOperator === '+') return '+';
-    if (keyOperator === '-') return '-';
-    if (keyOperator === '/') return '÷';
-    if (keyOperator === '*') return 'x';
+convertKey(e) {
+    if (e.key === '+') return '+';
+    if (e.key === '-') return '-';
+    if (e.key === '/') return '÷';
+    if (e.key === '*') return 'x';
 }};
 
 const calc = new calculator(previousText, currentText);

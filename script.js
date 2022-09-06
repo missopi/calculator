@@ -13,7 +13,7 @@ class calculator {
     constructor(previousText, currentText) {
       this.previousText = previousText;
       this.currentText = currentText;
-      this.clear()
+      this.clear();
 };
 
 clear() {
@@ -69,7 +69,7 @@ delete() {
 display() {
     this.currentText.innerText = this.roundNumber(this.current);
     if (this.operation != null) {
-      this.previousText.innerText =`${this.roundNumber(this.previous)} ${this.operation}`
+      this.previousText.innerText =`${this.roundNumber(this.previous)} ${this.operation}`;
     } else {
       this.previousText.innerText = '';
     };

@@ -125,8 +125,8 @@ deleteBtn.addEventListener('click', button => {
     calc.display();
 });
 
-window.addEventListener('keydown', () => {
-    calc.keyboardSupport();
+window.addEventListener('keydown', function(e) {
+    calc.keyboardSupport(e);
     calc.display();
 });
 

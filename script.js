@@ -6,7 +6,6 @@ const previousText = document.querySelector('[data-pre]');
 const currentText = document.querySelector('[data-current]');
 const deleteBtn = document.querySelector('[data-delete]');
 
-
 // class to house all of the calculator functions
 
 class calculator {
@@ -89,10 +88,9 @@ convertKey(e) {
     if (e.key === '*') return 'x';
 }};
 
-const calc = new calculator(previousText, currentText);
-
-
 // event listeners for all of the buttons to link up to the functions
+
+const calc = new calculator(previousText, currentText);
 
 numberBtns.forEach(button => {
     button.addEventListener('click', ()=> {

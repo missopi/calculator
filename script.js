@@ -78,7 +78,7 @@ display() {
 keyboardSupport(e) {
     if (e.key === 'Escape') this.clear();
     if ((e.key >= 0 && e.key <= 9) || (e.key === '.')) this.getNumber(e.key);
-    if ((e.key === '=') || (e.key === 'Enter')) this.operate();
+    if (e.key === '=') this.operate();
     if (e.key === 'Backspace') this.delete();
     if ((e.key === '+') || (e.key === '-')) this.chooseOperator(e.key);
     if ((e.key === '/') || (e.key === '*')) this.chooseOperator(this.convertKey(e));

@@ -81,12 +81,10 @@ keyboardSupport(e) {
     if ((e.key === '=') || (e.key === 'Enter')) this.operate();
     if (e.key === 'Backspace') this.delete();
     if ((e.key === '+') || (e.key === '-')) this.chooseOperator(e.key);
-    if ((e.key === '/') || (e.key === '*')) this.chooseOperator(convertKey(e.key));
+    if ((e.key === '/') || (e.key === '*')) this.chooseOperator(this.convertKey(e));
 };
 
 convertKey(e) {
-    if (e.key === '+') return '+';
-    if (e.key === '-') return '-';
     if (e.key === '/') return '÷';
     if (e.key === '*') return 'x';
 }};

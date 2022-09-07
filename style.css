@@ -105,4 +105,14 @@ button {
   padding: 16px;
 }
 
+.numberHover {
+    background-color: rgb(171, 170, 170);
+}
 
+.clearHover {
+    background-color: rgb(241, 50, 50);
+}
+
+.operatorHover {
+    background-color: rgb(103, 103, 103);
+}
